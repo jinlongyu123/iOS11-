@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MyOneViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
+    //1 创建导航控制器
+    MyOneViewController *one=[[MyOneViewController alloc] init];
+    UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:one];
+    
+    //2添加自控制器
+    //    MJOneViewController *one=[[MJOneViewController alloc] init];
+    //    [nav pushViewController:one animated:YES];
+    //    UINavigationController *nav=[[UINavigationController alloc]init];
+    
+    //3设置为窗口的根控制器
+    self.window.rootViewController = nav;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

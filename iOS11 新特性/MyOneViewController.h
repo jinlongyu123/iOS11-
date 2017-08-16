@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyOneViewController.h
 //  iOS11 新特性
 //
 //  Created by ml on 2017/8/4.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MyOneViewController : UIViewController
 
 @end
-
